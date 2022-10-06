@@ -133,20 +133,31 @@ main {
   line-height: 1.6rem;
   color: #757575;
 }
-.main-table--table {
-  width: 80%;
+.main-tables--table {
+  width: 100%;
   min-width: 310px;
-  max-width: 500px;
   height: auto;
   margin: 0 auto;
   font-family: 'Inter', sans-serif;
 }
-.main-table--table .main-table--slider {
+.main-tables--slider {
+  display: flex;
   width: 100%;
-  height: auto;
+  height: 330px;
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+}
+.main-table--container {
+  width: 70%;
+  min-width: 210px;
+  max-width: 300px;
+  height: 300px;
+  margin: 0 15px 0;
+  scroll-snap-align: center;
 }
 /* Monedas y Comisiones titulo */
-.main-table--table .currency-table--title, .main-table--table .fee-table--title {
+.main-tables--table .currency-table--title, .main-tables--table .fee-table--title {
   font-size: 1.8rem;
   font-weight: bold;
   line-height: 2.3rem;
@@ -159,9 +170,6 @@ main {
 }
 .fee-table--title {
   color: var(--secondary-blue);
-}
-.fee-table--container {
-  padding-top: 20px;
 }
 .currency-table--container .fee-table--container {
   width: 90%;
@@ -226,7 +234,7 @@ main {
   background-position: center;
   background-repeat: no-repeat;
 }
-.main-table--slider .main-table--right-arrow {
+.main-tables--slider .main-tables--right-arrow {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -237,7 +245,7 @@ main {
   background-position: 60% 60%;
   background-repeat: no-repeat;
 }
-.main-table--slider .main-table--left-arrow {
+.main-tables--slider .main-tables--left-arrow {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -248,7 +256,7 @@ main {
   background-position: 100% 60%;
   background-repeat: no-repeat;
 }
-.main-table--date {
+.main-tables--date {
   width: 190px;
   height: 30px;
   margin: 0 auto;
@@ -256,7 +264,7 @@ main {
   padding: 7px;
   border-radius: 8px;
 }
-.main-table--date p {
+.main-tables--date p {
   font-size: 1.2rem;
   font-weight: 300;
   line-height: 1.5rem;
@@ -415,8 +423,7 @@ main {
   min-width: 230px;
   max-width: 300px;
   height: 250px;
-  margin: 50px auto 0;
-  margin-left: 10px;
+  margin: 50px 15px 0;
   padding: 0 15px;
   background-color: var(--just-white);
   border-radius: 15px;
